@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewModel"
+            type="com.hsnbyhn.moviebrowser.settings.SettingsViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/settings_toolbar"
+                android:layout_width="match_parent"
+                app:title="@string/settings"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:checkedButton="@{viewModel.radioButtonChecked}"
+            app:checkedButtonAttrChanged="@{viewModel}"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/language_radiobutton_english_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/english"/>
+
+            <RadioButton
+                android:id="@+id/language_radiobutton_turkish_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/turkce"/>
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</layout>

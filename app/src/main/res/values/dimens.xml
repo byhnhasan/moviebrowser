@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<resources>
+    <dimen name="user_icon_width">70dp</dimen>
+    <dimen name="user_icon_height">70dp</dimen>
+    <dimen name="thumbnail_height">120dp</dimen>
+    <dimen name="cardview_corner_radius">4dp</dimen>
+    <dimen name="cardview_elevation">2dp</dimen>
+    <dimen name="cardview_layout_margin">10dp</dimen>
+    <dimen name="padding_small">10dp</dimen>
+    <dimen name="text_size_small">11dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">10dp</dimen>
+    <dimen name="appbar_default_height">180dp</dimen>
+    <dimen name="backdrop_image_default_height">200dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="space_x_small">8dp</dimen>
+    <dimen name="space_small">12dp</dimen>
+    <dimen name="space_xx_small">4dp</dimen>
+</resources>

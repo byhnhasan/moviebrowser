@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background"/>
+    <foreground android:drawable="@drawable/ic_launcher_foreground"/>
+</adaptive-icon>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+                android:id="@+id/nav_favorites"
+                android:icon="@drawable/ic_menu_favorites"
+                android:title="@string/favorites"/>
+
+        <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_settings"
+                android:title="@string/settings"/>
+
+        <item
+                android:id="@+id/nav_licence"
+                android:icon="@drawable/ic_menu_licence"
+                android:title="@string/licence"/>
+    </group>
+
+</menu>

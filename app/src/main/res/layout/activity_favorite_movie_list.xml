@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="viewModel" type="com.hsnbyhn.moviebrowser.feature.favorites.FavoriteMovieListViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/favorite_movie_toolbar"
+                android:layout_width="match_parent"
+                app:title="@string/my_favorite_movies"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favorite_movie_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:data="@{viewModel.movieList}"
+            app:portrait="@{viewModel.portrait}"
+            app:listener="@{viewModel}"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+
+    </LinearLayout>
+
+</layout>

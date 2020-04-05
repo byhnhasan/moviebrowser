@@ -1,0 +1,41 @@
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<resources>
+    <string name="app_name">Movie Browser</string>
+    <string name="movies">Movies</string>
+    <string name="settings">Settings</string>
+    <string name="licence">Licence</string>
+    <string name="search_title">Search Movies</string>
+    <string name="upcoming">UPCOMING</string>
+    <string name="now_playing">NOW PLAYING</string>
+    <string name="popular">POPULAR</string>
+    <string name="top_rated">TOP RATED</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="action_settings">Settings</string>
+    <string name="move_title">Movie Detail</string>
+    <string name="released">Released</string>
+    <string name="rate">Rate</string>
+    <string name="language">Language</string>
+    <string name="movie_detail_title">Movie Detail Activity</string>
+    <string name="favorites">Favorites</string>
+    <string name="share">Share</string>
+    <string name="my_favorite_movies">My Favorite Movies</string>
+    <string name="add_favorite_message">Movie has been added to Favorites</string>
+    <string name="movie_search">Movie Search</string>
+    <string name="licence_activity">Licence Activity</string>
+    <string name="licence_text" translatable="false">This product uses the TMDb API but is not endorsed or certified by
+        TMDb.
+    </string>
+    <string name="settings_activity">Settings Activity</string>
+    <string name="english" translatable="false">English</string>
+    <string name="turkce" translatable="false">Turkce</string>
+</resources>

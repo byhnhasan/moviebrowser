@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<resources>
+
+    <color name="colorPrimary">#F5DE50</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#111</color>
+
+    <color name="c_323233">#323233</color>
+</resources>

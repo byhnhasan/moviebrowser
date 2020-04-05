@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/navigation_upcoming"
+            android:icon="@drawable/ic_menu_movies"
+            android:title="@string/upcoming"/>
+    <item
+            android:id="@+id/navigation_nowplaying"
+            android:icon="@drawable/ic_menu_movies"
+            android:title="@string/now_playing"/>
+    <item
+            android:id="@+id/navigation_popular"
+            android:icon="@drawable/ic_menu_movies"
+            android:title="@string/popular"/>
+    <item
+            android:id="@+id/navigation_toprated"
+            android:icon="@drawable/ic_menu_movies"
+            android:title="@string/top_rated"/>
+
+
+</menu>

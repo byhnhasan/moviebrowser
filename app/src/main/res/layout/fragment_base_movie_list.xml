@@ -1,0 +1,21 @@
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="viewModel" type="com.hsnbyhn.moviebrowser.feature.BaseMovieListViewModel"/>
+    </data>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movie_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:data="@{viewModel.movieList}"
+        app:portrait="@{viewModel.portrait}"
+        app:listener="@{viewModel}"
+        android:scrollbars="vertical"/>
+
+</layout>

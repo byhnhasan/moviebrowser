@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<resources>
+    <style name="TextViewStyle">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+</resources>

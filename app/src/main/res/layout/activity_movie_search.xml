@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="viewModel"
+            type="com.hsnbyhn.moviebrowser.feature.search.MovieSearchViewModel"/>
+    </data>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/c_323233"
+        android:id="@+id/search_movie_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:data="@{viewModel.movieList}"
+        app:portrait="@{viewModel.portrait}"
+        app:listener="@{viewModel}"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+</layout>

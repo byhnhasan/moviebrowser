@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewModel"
+            type="com.hsnbyhn.moviebrowser.licence.LicenceViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/licence_toolbar"
+                android:layout_width="match_parent"
+                app:title="@string/licence"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:padding="@dimen/default_padding"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/tmdb_imageview_logo_image"
+                android:layout_width="@dimen/user_icon_width"
+                android:layout_height="@dimen/user_icon_height"
+                android:layout_marginRight="@dimen/default_margin"
+                android:src="@drawable/tmdb_logo"/>
+
+            <TextView
+                android:id="@+id/tmdb_textview_licence_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/licence_text"
+                android:theme="@style/TextViewStyle"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

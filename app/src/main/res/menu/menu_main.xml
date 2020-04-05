@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MainActivity">
+
+    <item
+            android:id="@+id/search_action"
+            android:title="@string/search_title"
+            app:actionViewClass="androidx.appcompat.widget.SearchView"
+            android:icon="@drawable/ic_search_24px"
+            app:showAsAction="always"/>
+
+
+</menu>

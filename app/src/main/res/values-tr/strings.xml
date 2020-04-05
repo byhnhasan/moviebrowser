@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<resources>
+    <string name="app_name">Film Arama</string>
+    <string name="movies">Filmler</string>
+    <string name="settings">Ayarlar</string>
+    <string name="licence">Lisans</string>
+    <string name="search_title">Film Ara</string>
+    <string name="upcoming">GELECEK</string>
+    <string name="now_playing">GÖSTERİMDE</string>
+    <string name="popular">POPÜLER</string>
+    <string name="top_rated">EN FAZLA OY ALANLAR</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="action_settings">Ayarlar</string>
+    <string name="move_title">Film Detayı</string>
+    <string name="released">Gösterim Tarihi</string>
+    <string name="rate">Puan</string>
+    <string name="language">Dil</string>
+    <string name="movie_detail_title">Film Detayı</string>
+    <string name="favorites">Favoriler</string>
+    <string name="share">Paylaş</string>
+    <string name="my_favorite_movies">Favori Filmlerim</string>
+    <string name="add_favorite_message">Favorilere Eklendi</string>
+    <string name="movie_search">Film Ara</string>
+    <string name="licence_activity">Lisans</string>
+    <string name="settings_activity">Ayarlar</string>
+</resources>
