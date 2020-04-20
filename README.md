@@ -1,3 +1,3 @@
 # moviebrowser
 
-An movie browsing application designed with MVVM architecture
+A movie browsing application designed with MVVM architecture
