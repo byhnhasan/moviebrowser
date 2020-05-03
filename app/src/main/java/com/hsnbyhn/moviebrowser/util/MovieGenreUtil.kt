@@ -12,12 +12,12 @@ import com.hsnbyhn.moviebrowser.data.model.MovieGenreModel
 
 object MovieGenreUtil {
 
-    fun findGenreName(id: Int, genreList: ArrayList<MovieGenreModel>): String {
-        for (i in genreList.indices) {
-            if (genreList[i].movieGenreId == id) {
-                return genreList[i].movieGenreName.orEmpty()
-            }
+    fun findGenreName(id: Int, genreList: ArrayList<MovieGenreModel>?): String {
 
+        genreList?.forEach {
+            if (it.movieGenreId == id) {
+                return it.movieGenreName.orEmpty()
+            }
         }
         return ""
     }

@@ -18,7 +18,7 @@ class FavoriteMovieListViewModel : BaseMovieListViewModel() {
 
         if (favoriteMovies.isNullOrEmpty().not()) {
             val favoriteMovieList = arrayListOf<MovieModel>()
-            for (item in favoriteMovies) {
+            favoriteMovies.forEach {item ->
                 val movieModel = MovieModel(
                     id = item.movieId.toLong(),
                     title = item.title,

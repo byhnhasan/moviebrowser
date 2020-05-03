@@ -1,20 +1,19 @@
 package com.hsnbyhn.moviebrowser.feature.moviedetail
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.hsnbyhn.moviebrowser.BuildConfig
+import androidx.lifecycle.viewModelScope
 import com.hsnbyhn.moviebrowser.data.MovieGenreResponseModel
 import com.hsnbyhn.moviebrowser.data.db.DBInstance
 import com.hsnbyhn.moviebrowser.data.db.Movie
 import com.hsnbyhn.moviebrowser.data.model.MovieModel
 import com.hsnbyhn.moviebrowser.feature.BaseMovieListViewModel
 import com.hsnbyhn.moviebrowser.network.MBRetrofit
+import com.hsnbyhn.moviebrowser.network.SafeApiCall
 import com.hsnbyhn.moviebrowser.util.ConversionUtil
 import com.hsnbyhn.moviebrowser.util.DateUtil
 import com.hsnbyhn.moviebrowser.util.MovieGenreUtil
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 /**
  * Created by hasanbayhan on 28.03.2020
@@ -35,24 +34,26 @@ class MovieDetailViewModel(
 
     var movieLanguage = MutableLiveData<String>()
 
+    var response: MovieGenreResponseModel? = null
 
-    init {//private fun setMovieGenres(movie: MovieModel) {
+
+    init {
         setFields()
-        MBRetrofit.api.getMovieGenreList().enqueue(object : Callback<MovieGenreResponseModel> {
-            override fun onFailure(call: Call<MovieGenreResponseModel>, t: Throwable) {
-                Log.d("FAIL", t.message.orEmpty())
+
+        viewModelScope.launch(Dispatchers.Main) {
+            response = SafeApiCall.safeApiCall {
+                MBRetrofit.api.getMovieGenreList()
             }
+            setGenreList()
+        }
+    }
 
-            override fun onResponse(call: Call<MovieGenreResponseModel>, response: Response<MovieGenreResponseModel>) {
-                val genreList = arrayListOf<String>()
-                for (i in movie.genreIds!!.indices) {
-                    genreList.add(MovieGenreUtil.findGenreName(movie.genreIds[i], response.body()!!.movieGenreList))
-                }
-                movieGenreList.value = genreList
-
-            }
-        })
-
+    private fun setGenreList() {
+        val genreList = arrayListOf<String>()
+        for (i in movie.genreIds!!.indices) {
+            genreList.add(MovieGenreUtil.findGenreName(movie.genreIds[i], response?.movieGenreList))
+        }
+        movieGenreList.value = genreList
     }
 
     private fun setFields() {
@@ -63,7 +64,6 @@ class MovieDetailViewModel(
         movieRating.value = movie.voteAverage
         movieTitle.value = movie.title
         movieLanguage.value = movie.originalLanguage
-        //setMovieGenres(movie)
     }
 
     fun insertFavoriteMovie() {
@@ -80,6 +80,8 @@ class MovieDetailViewModel(
             originalLanguage = movie.originalLanguage
 
         )
+
         DBInstance.movieDB.movieDao().insertMovie(movie)
+
     }
 }

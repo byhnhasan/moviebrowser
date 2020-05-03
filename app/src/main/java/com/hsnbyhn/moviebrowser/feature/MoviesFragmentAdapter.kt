@@ -3,8 +3,6 @@ package com.hsnbyhn.moviebrowser.feature
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.hsnbyhn.moviebrowser.BuildConfig
 import com.hsnbyhn.moviebrowser.data.model.MovieModel
 import com.hsnbyhn.moviebrowser.databinding.FragmentBaseMovieItemBinding
 
@@ -43,12 +41,8 @@ class MovieFragmentAdapter(
 
         fun bind(movie: MovieModel) {
             binding.movie = movie
-            /*Glide.with(binding.movieImageviewPosterImage.context).
-                load(BuildConfig.IMAGE_URL + movie.posterPath).into(binding.movieImageviewPosterImage)*/
             binding.executePendingBindings()
         }
-
-
     }
 
 }

@@ -23,5 +23,4 @@ class EndpointInterceptor : Interceptor {
         return chain.proceed(newRequestBuilder.build())
 
     }
-
 }

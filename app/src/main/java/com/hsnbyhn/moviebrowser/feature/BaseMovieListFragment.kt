@@ -46,21 +46,6 @@ class BaseMovieListFragment : Fragment() {
             startActivity(MovieDetailActivity.newIntent(it, context!!))
         })
         return binding.root
-
-            /*viewModel.movieList.observe(viewLifecycleOwner, Observer {movies ->
-            movie_recycler_view.let {
-                if (viewModel.portrait.value == true) {
-                    it.layoutManager = GridLayoutManager(it.context, PORTRAIT_SPAN)
-                } else {
-                    it.layoutManager = GridLayoutManager(it.context, LANDSCAPE_SPAN)
-                }
-                it.setHasFixedSize(true)
-                val adapter = MovieFragmentAdapter(movies, viewModel)
-                it.adapter = adapter
-                adapter.notifyDataSetChanged()
-            }
-        })
-        return inflater.inflate(R.layout.fragment_base_movie_list, container, false)*/
     }
 
 

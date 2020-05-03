@@ -1,12 +1,12 @@
 package com.hsnbyhn.moviebrowser.feature.popular
 
-import android.util.Log
+import androidx.lifecycle.viewModelScope
 import com.hsnbyhn.moviebrowser.data.MovieModelResponseModel
 import com.hsnbyhn.moviebrowser.feature.BaseMovieListViewModel
 import com.hsnbyhn.moviebrowser.network.MBRetrofit
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.hsnbyhn.moviebrowser.network.SafeApiCall
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 /**
  * Created by hasanbayhan on 28.03.2020
@@ -15,16 +15,16 @@ import retrofit2.Response
 
 class PopularViewModel : BaseMovieListViewModel() {
 
-    init {
-        MBRetrofit.api.getPopularMovies().enqueue(object : Callback<MovieModelResponseModel> {
-            override fun onFailure(call: Call<MovieModelResponseModel>, t: Throwable) {
-                Log.d("FAIL", t.message.orEmpty())
-            }
+    var response: MovieModelResponseModel? = null
 
-            override fun onResponse(call: Call<MovieModelResponseModel>, response: Response<MovieModelResponseModel>) {
-                movieList.value = response.body()!!.movies
+    init {
+
+        viewModelScope.launch(Dispatchers.Main) {
+            response = SafeApiCall.safeApiCall {
+                MBRetrofit.api.getPopularMovies()
             }
-        })
+            movieList.value = response?.movies
+        }
     }
 
 }
